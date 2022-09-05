@@ -310,6 +310,7 @@ template {
 * {
   font-family: roboto, Sans-serif;
   box-sizing: border-box;
+  margin: 0;
 }
 
 header {
@@ -346,7 +347,7 @@ form input {
 }
 
 footer {
-  padding: 0 20px 0 20px;
+  padding: 40px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   background-color: #353535;
@@ -412,7 +413,7 @@ h1 {
 }
 
 .operation {
-  padding: 0 20px 0 20px;
+  padding: 40px 20px 40px 20px;
 }
 .operation__container {
   display: flex;
@@ -445,6 +446,48 @@ h1 {
   color: #7e7e7e;
   margin: 0 40px 0 40px;
   font-size: 20px;
+}
+
+.restaurant {
+  background: #f6f6f6;
+  padding: 40px 20px 40px 20px;
+}
+
+.card {
+  position: relative;
+  margin: 40px 0 40px 0;
+  background: white;
+  height: 300px;
+  border-radius: 20px;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px 20px 0 0;
+}
+.card__new {
+  padding: 5px 10px 5px 10px;
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 600;
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px 5px 20px;
+}
+.card__text {
+  padding-top: 5px;
+}
+.card__text--bold {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
