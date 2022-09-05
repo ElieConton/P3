@@ -1,5 +1,5 @@
-@mixin shadow($size: 5px){
-    box-shadow: 0 $size 10px 0 #c6c6c6;
+@mixin shadow($color: #c6c6c6){
+    box-shadow: 0 5px 10px 0 $color;
 }
 
 @mixin center{
@@ -23,9 +23,38 @@
     border-radius: 25px;
     padding: 0 20px 0 20px;
     &:hover{
-        @include shadow(20px);
+        @include shadow(black);
         cursor: pointer;
         background: lighten($color: $color-primary, $amount: 10);
 
+    }
+}
+
+@mixin container{
+    @include center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: $color-background-section;
+    border-radius: 20px;
+    height: 70px;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 20px 0 20px 0;
+    :nth-child(1){
+        @include center;
+        color: white;
+        position: absolute;
+        left: -5px;
+        height: 20px;
+        width: 20px;
+        border-radius: 25px;
+        background: $color-primary;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    :nth-child(2){
+        color: #7e7e7e;
+        margin: 0 40px 0 40px;
+        font-size: 20px;
     }
 }

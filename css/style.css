@@ -406,9 +406,45 @@ h1 {
   margin-top: 20px;
 }
 .hero button:hover {
-  box-shadow: 0 20px 10px 0 #c6c6c6;
+  box-shadow: 0 5px 10px 0 black;
   cursor: pointer;
   background: #ae80e5;
+}
+
+.operation {
+  padding: 0 20px 0 20px;
+}
+.operation__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  height: 70px;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+}
+.operation__container :nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background: #9356DC;
+  font-size: 14px;
+  font-weight: 400;
+}
+.operation__container :nth-child(2) {
+  color: #7e7e7e;
+  margin: 0 40px 0 40px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
