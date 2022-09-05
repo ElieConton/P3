@@ -1,0 +1,59 @@
+header {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 0 black;
+  margin-bottom: 3px;
+}
+
+form {
+  height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form i {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+form input {
+  height: 50px;
+  width: 160px;
+  text-decoration: none;
+  background-color: #eaeaea;
+  border: 0;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+footer {
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+
+footer a {
+  margin: 10px 0 0 0;
+  color: white;
+  text-decoration: none;
+}
+
+footer i {
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+
+footer p {
+  font-family: shrikhand;
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

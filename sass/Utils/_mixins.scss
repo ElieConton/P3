@@ -1,0 +1,31 @@
+@mixin shadow($size: 5px){
+    box-shadow: 0 $size 10px 0 #c6c6c6;
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin padding-pages{
+    padding: 0 20px 0 20px;
+}
+
+@mixin btn{
+    @include shadow;
+    color: white;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    border: 0;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 0 20px 0 20px;
+    &:hover{
+        @include shadow(20px);
+        cursor: pointer;
+        background: lighten($color: $color-primary, $amount: 10);
+
+    }
+}

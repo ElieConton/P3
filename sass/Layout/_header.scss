@@ -1,0 +1,6 @@
+header{
+    height: 75px;
+    @include center;
+    @include shadow;
+    margin-bottom: 3px;
+}
