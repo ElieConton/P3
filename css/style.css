@@ -329,12 +329,10 @@ form {
   justify-content: center;
   align-items: center;
 }
-
 form i {
   margin-right: 20px;
   font-size: 15px;
 }
-
 form input {
   height: 50px;
   width: 160px;
@@ -354,18 +352,15 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
 footer a {
   margin: 10px 0 0 0;
   color: white;
   text-decoration: none;
 }
-
 footer i {
   width: 20px;
   margin: 0 10px 0 0;
 }
-
 footer p {
   font-family: shrikhand;
   font-size: 20px;
