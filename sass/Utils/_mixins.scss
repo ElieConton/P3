@@ -14,19 +14,21 @@
 
 @mixin btn{
     @include shadow;
-    color: white;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     border: 0;
     height: 50px;
-    font-size: 17px;
-    font-weight: 500;
     border-radius: 25px;
     padding: 0 20px 0 20px;
     &:hover{
         @include shadow(black);
         cursor: pointer;
-        background: linear-gradient(to bottom right, lighten($color: $color-secondary, $amount: 10), lighten($color: $color-primary, $amount: 10));
-
+        background: linear-gradient(to bottom right, lighten($color: $color-secondary, $amount: 10), lighten($color: $color-primary, $amount: 10));  
+    }
+    a{
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;  
     }
 }
 
@@ -45,7 +47,7 @@
         @include center;
         color: white;
         position: absolute;
-        left: -5px;
+        left: -10px;
         height: 20px;
         width: 20px;
         border-radius: 25px;

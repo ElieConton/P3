@@ -24,12 +24,14 @@ h1{
 
 .operation{
     @include padding-pages;
-    &__container{
-        @include container;
-    }
 }
 
-.restaurant{
+.container{
+    @include container;
+   }
+
+
+#restaurant{
     background: $color-background-section;
     @include padding-pages;
 }
