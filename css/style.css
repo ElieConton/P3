@@ -377,18 +377,11 @@ footer p {
   text-align: center;
   padding: 30px 25px 30px 25px;
 }
-
-h1 {
-  font-size: 30px;
-  font-weight: 600;
-}
-
 .hero p {
   font-size: 20px;
   font-weight: 300;
   color: grey;
 }
-
 .hero button {
   box-shadow: 0 5px 10px 0 #c6c6c6;
   color: white;
@@ -405,6 +398,11 @@ h1 {
   box-shadow: 0 5px 10px 0 black;
   cursor: pointer;
   background: linear-gradient(to bottom right, #fface8, #ae80e5);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .operation {
