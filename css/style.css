@@ -341,7 +341,7 @@ form input {
   border: 0;
   color: black;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 footer {
@@ -404,7 +404,7 @@ h1 {
 .hero button:hover {
   box-shadow: 0 5px 10px 0 black;
   cursor: pointer;
-  background: #ae80e5;
+  background: linear-gradient(to bottom right, #fface8, #ae80e5);
 }
 
 .operation {
@@ -414,6 +414,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 5px 10px 0 #c6c6c6;
   justify-content: flex-start;
   position: relative;
   background-color: #f6f6f6;
@@ -449,6 +450,7 @@ h1 {
 }
 
 .card {
+  box-shadow: 0 5px 10px 0 #c6c6c6;
   position: relative;
   margin: 40px 0 40px 0;
   background: white;

@@ -25,13 +25,14 @@
     &:hover{
         @include shadow(black);
         cursor: pointer;
-        background: lighten($color: $color-primary, $amount: 10);
+        background: linear-gradient(to bottom right, lighten($color: $color-secondary, $amount: 10), lighten($color: $color-primary, $amount: 10));
 
     }
 }
 
 @mixin container{
     @include center;
+    @include shadow;
     justify-content: flex-start;
     position: relative;
     background-color: $color-background-section;
