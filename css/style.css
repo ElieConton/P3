@@ -322,6 +322,11 @@ header {
   margin-bottom: 3px;
 }
 
+header p {
+  font-family: shrikhand, sans-serif;
+  font-size: 45px;
+}
+
 form {
   height: 50px;
   background-color: #eaeaea;
