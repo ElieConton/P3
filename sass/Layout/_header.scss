@@ -3,9 +3,15 @@ header{
     @include center;
     @include shadow;
     margin-bottom: 3px;
-}
-
-header p{
-    font-family: shrikhand, sans-serif;
-    font-size: 45px;
+    position: relative;
+    p{
+        font-family: shrikhand, sans-serif;
+        font-size: 45px;
+    }
+    i{
+        font-size: 25px;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+    }
 }

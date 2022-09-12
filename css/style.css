@@ -321,11 +321,17 @@ header {
   align-items: center;
   box-shadow: 0 5px 10px 0 #c6c6c6;
   margin-bottom: 3px;
+  position: relative;
 }
-
 header p {
   font-family: shrikhand, sans-serif;
   font-size: 45px;
+}
+header i {
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 
 form {
