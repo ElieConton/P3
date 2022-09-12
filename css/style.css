@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -571,6 +572,9 @@ img {
   font-size: 17px;
   font-weight: 500;
   text-decoration: none;
+}
+.menu .entrée, .menu .plat, .menu .dessert {
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

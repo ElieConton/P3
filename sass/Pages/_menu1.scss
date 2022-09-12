@@ -42,6 +42,10 @@ button{
     @include btn;
     width: 50%;
 }
+
+.entrée, .plat, .dessert{
+    margin-bottom: 30px;
+}
 }
 
 
