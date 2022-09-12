@@ -313,10 +313,6 @@ template {
   margin: 0;
 }
 
-h2 {
-  font-family: shrikhand, sans-serif;
-}
-
 header {
   height: 75px;
   display: flex;
