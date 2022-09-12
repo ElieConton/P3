@@ -19,6 +19,7 @@
     height: 50px;
     border-radius: 25px;
     padding: 0 20px 0 20px;
+    color: white;
     &:hover{
         @include shadow(black);
         cursor: pointer;
@@ -60,4 +61,26 @@
         margin: 0 40px 0 40px;
         font-size: 20px;
     }
+}
+
+@mixin dish {
+    @include shadow;
+    background: white;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    .dish{
+        &__name{
+            font-weight: 700;
+            margin-bottom: 5px;
+    }
+    }
+    .detail{
+        display: flex;
+        justify-content: space-between;
+        &__price{
+            font-weight: 700;
+        }
+    }
+
 }

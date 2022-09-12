@@ -2,16 +2,15 @@ img{
     height: 300px;
     object-fit: cover;
     width: 100%;
-    position: relative;
 }
 
 .menu{
-    background: #f6f6f6;
+    background-color: #f6f6f6;
     border-radius: 30px;
-    position: absolute;
-    bottom: -100px;
     width: 100%;
+    margin-top: -50px;
     padding: 30px 20px 30px 20px;
+    position: relative;
     h2{
         font-family: shrikhand, sans-serif;
         margin-bottom: 30px;
@@ -31,6 +30,19 @@ img{
         bottom: -10px;
         left: 0;
     }
+
+.dish{
+    @include dish;
 }
+.button{
+    @include center;
+    margin: 50px 0 50px 0;
+}
+button{
+    @include btn;
+    width: 50%;
+}
+}
+
 
 

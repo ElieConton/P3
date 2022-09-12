@@ -394,6 +394,7 @@ footer p {
   height: 50px;
   border-radius: 25px;
   padding: 0 20px 0 20px;
+  color: white;
   margin-top: 20px;
 }
 .hero button:hover {
@@ -497,16 +498,15 @@ img {
   height: 300px;
   object-fit: cover;
   width: 100%;
-  position: relative;
 }
 
 .menu {
-  background: #f6f6f6;
+  background-color: #f6f6f6;
   border-radius: 30px;
-  position: absolute;
-  bottom: -100px;
   width: 100%;
+  margin-top: -50px;
   padding: 30px 20px 30px 20px;
+  position: relative;
 }
 .menu h2 {
   font-family: shrikhand, sans-serif;
@@ -526,6 +526,51 @@ img {
   position: absolute;
   bottom: -10px;
   left: 0;
+}
+.menu .dish {
+  box-shadow: 0 5px 10px 0 #c6c6c6;
+  background: white;
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+.menu .dish .dish__name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.menu .dish .detail {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .dish .detail__price {
+  font-weight: 700;
+}
+.menu .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+.menu button {
+  box-shadow: 0 5px 10px 0 #c6c6c6;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: 0;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 20px 0 20px;
+  color: white;
+  width: 50%;
+}
+.menu button:hover {
+  box-shadow: 0 5px 10px 0 black;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #fface8, #ae80e5);
+}
+.menu button a {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
