@@ -43,6 +43,12 @@ h1{
     background: white;
     height: 300px;
     border-radius: 20px;
+    a{
+        &:visited{
+            text-decoration: white;
+            color: black;
+        }
+    }
     img{
         object-fit: cover;
         width: 100%;

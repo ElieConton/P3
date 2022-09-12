@@ -14,4 +14,10 @@ header{
         left: 20px;
         top: 25px;
     }
+    a{
+        &:visited{
+            color: black;
+        }
+    }
 }
+

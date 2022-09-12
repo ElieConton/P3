@@ -333,6 +333,9 @@ header i {
   left: 20px;
   top: 25px;
 }
+header a:visited {
+  color: black;
+}
 
 form {
   height: 50px;
@@ -471,6 +474,10 @@ h1 {
   background: white;
   height: 300px;
   border-radius: 20px;
+}
+.card a:visited {
+  text-decoration: white;
+  color: black;
 }
 .card img {
   object-fit: cover;
