@@ -43,7 +43,10 @@ h1{
     background: white;
     height: 300px;
     border-radius: 20px;
+    transition: all 500ms;
     a{
+        text-decoration: white;
+            color: black;
         &:visited{
             text-decoration: white;
             color: black;
@@ -77,4 +80,7 @@ h1{
             font-weight: 700;
         }
     }
+    &:hover{
+        transform: scale(1.05)
+}
 }
