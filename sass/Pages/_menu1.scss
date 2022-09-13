@@ -19,9 +19,18 @@ img{
         color: #3d3d3d;
         font-weight: 400;
         margin-bottom: 20px;
+        position: relative;
     }
+    h3:after{
+        content: '';
+        height: 3px;
+        width: 40px;
+        background: $color-tertiary;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
 }
-
+}
 .dish{
     @include dish;
 }
