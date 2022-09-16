@@ -313,16 +313,6 @@ template {
   margin: 0;
 }
 
-@keyframes pop {
-  from {
-    bottom: -30px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
 header {
   height: 75px;
   display: flex;
