@@ -42,8 +42,29 @@ button{
     @include btn;
     width: 50%;
 }
-.dishes{
+.dishes1{
     margin-bottom: 40px;
+    position: relative;
+    animation: pop 2s;
+}
+
+.dishes2{
+    margin-bottom: 40px;
+    position: relative;
+    animation: pop 2s 300ms both;
+    
+}
+
+.dishes3{
+    margin-bottom: 40px;
+    position: relative;
+    animation: pop 2s 600ms both;
+
+}
+
+@keyframes pop {
+    from { bottom: -30px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
 }
 
 
