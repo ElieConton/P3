@@ -11,6 +11,10 @@ img{
     margin-top: -50px;
     padding: 30px 20px 30px 20px;
     position: relative;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
     h2{
         font-family: shrikhand, sans-serif;
         margin-bottom: 30px;
@@ -69,4 +73,26 @@ button{
 
 
 
+.coche{
+    height: 42px;
+    width: 10%;
+    &__test{
+    background: green;
+    height: 42px;
+    border-radius: 0 15px 15px 0;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 1000ms;
+}
+}
 
+.dish__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.heart{
+    @include heart;
+}

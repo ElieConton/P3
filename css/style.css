@@ -559,6 +559,24 @@ h1 {
     transform: rotate(1turn);
   }
 }
+.heart {
+  height: 35px;
+  width: 35px;
+}
+.heart__full {
+  fill: url(#heart-gradient);
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+}
+.heart__full:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+.heart__empty {
+  position: relative;
+}
+
 img {
   height: 300px;
   object-fit: cover;
@@ -572,6 +590,10 @@ img {
   margin-top: -50px;
   padding: 30px 20px 30px 20px;
   position: relative;
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
 }
 .menu h2 {
   font-family: shrikhand, sans-serif;
@@ -597,13 +619,13 @@ img {
   box-shadow: 0 5px 10px 0 #c6c6c6;
   background: white;
   border-radius: 15px;
-  padding: 10px 10px 10px 10px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   position: relative;
 }
-.dish:hover + .coche {
+.dish:hover > .coche > .coche__test {
   transform: scaleX(1);
 }
 .dish__text {
@@ -625,6 +647,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  margin: 0 10px 0 10px;
 }
 
 .button {
@@ -698,6 +721,43 @@ button a {
     bottom: 0;
     opacity: 1;
   }
+}
+.coche {
+  height: 42px;
+  width: 10%;
+}
+.coche__test {
+  background: green;
+  height: 42px;
+  border-radius: 0 15px 15px 0;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 1000ms;
+}
+
+.dish__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.heart {
+  height: 35px;
+  width: 35px;
+}
+.heart__full {
+  fill: url(#heart-gradient);
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+}
+.heart__full:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+.heart__empty {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

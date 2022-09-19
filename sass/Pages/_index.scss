@@ -109,3 +109,7 @@ h1{
     to {transform: rotate(1turn);
     }   
 }
+
+.heart{
+    @include heart;
+}

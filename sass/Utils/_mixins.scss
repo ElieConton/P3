@@ -84,17 +84,20 @@
     @include shadow;
     background: white;
     border-radius: 15px;
-    padding: 10px 10px 10px 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     &:hover{
-            & + .coche{
+            & > .coche{
+                & > .coche__test{
                 transform: scaleX(1);
 
             }
         }
+    
+    }
     &__text{
             white-space: nowrap;
             overflow: hidden;
@@ -114,8 +117,26 @@
             display: flex;
             flex-direction: column;
             justify-content: end;
+            margin: 0 10px 0 10px;
         }
 }
 
     
 
+@mixin heart{
+    height: 35px;
+    width: 35px;
+    &__full{
+        fill: url(#heart-gradient);
+        position: absolute;
+        right: 20px;
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+            transition: 0.5s;
+    }
+}
+    &__empty{
+        position: relative;
+    }
+}
