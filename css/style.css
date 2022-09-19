@@ -488,7 +488,7 @@ h1 {
   background: white;
   height: 300px;
   border-radius: 20px;
-  transition: all 500ms;
+  transition: transform 500ms;
 }
 .card a {
   text-decoration: white;
@@ -532,25 +532,39 @@ h1 {
 }
 
 .loader {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  background: #9356DC;
+  animation: loader 2s both;
+}
+.loader__spinner {
+  position: fixed;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.loader::after {
-  content: "";
   height: 75px;
   width: 75px;
   border: 15px solid white;
   border-top-color: #99E2D0;
   border-radius: 50%;
-  animation: loading 1.75s ease infinite;
+  animation: loading 1.75s ease;
 }
 
+@keyframes loader {
+  0%, 75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes loading {
   from {
     transform: rotate(0turn);
