@@ -541,13 +541,13 @@ h1 {
   left: 0;
   background: #9356DC;
   animation: loader 2s both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .loader__spinner {
   position: fixed;
   z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 75px;
   width: 75px;
   border: 15px solid white;
@@ -570,7 +570,7 @@ h1 {
     transform: rotate(0turn);
   }
   to {
-    transform: rotate(1turn);
+    transform: rotate(2turn);
   }
 }
 .heart {

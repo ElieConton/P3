@@ -96,18 +96,18 @@ h1{
     left: 0;
     background: $color-primary;
     animation: loader 2s both;
+    @include center;
     &__spinner{
         position: fixed;
         z-index: 3;
-        @include center;
         height: 75px;
         width: 75px;
         border: 15px solid white;
         border-top-color: $color-tertiary;
         border-radius: 50%;
         animation: loading 1.75s ease; 
-}
-}
+        }
+    }
 @keyframes loader {
     0%,75% {opacity: 0.5;};
     100% {opacity: 0; visibility: hidden};
@@ -116,7 +116,7 @@ h1{
 @keyframes loading{
     from  {transform: rotate(0turn);
     }
-    to {transform: rotate(1turn);
+    to {transform: rotate(2turn);
     }   
 }
 
