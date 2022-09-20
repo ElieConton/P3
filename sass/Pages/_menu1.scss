@@ -74,23 +74,14 @@ button{
 
 
 .coche{
-    height: 42px;
-    width: 10%;
-    &__test{
-    background: green;
-    height: 42px;
+    display: none;
+    position: absolute;
+    background: $color-tertiary;
     border-radius: 0 15px 15px 0;
-    transform: scaleX(0);
-    transform-origin: 100% 50%;
-    transition: transform 1000ms;
-}
-}
-
-.dish__content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
+    right: 0;
+    padding: 0 13px;
+    height: 100%;
+    width: 50px;
 }
 
 .heart{

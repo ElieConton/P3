@@ -313,6 +313,30 @@ template {
   margin: 0;
 }
 
+@keyframes coche {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes price {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 50px;
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 header {
   height: 75px;
   display: flex;
@@ -634,17 +658,32 @@ img {
   background: white;
   border-radius: 15px;
   margin-bottom: 10px;
+  height: 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
 }
-.dish:hover > .coche > .coche__test {
-  transform: scaleX(1);
+.dish:hover .coche {
+  animation: coche 0.5s ease both;
+  transform-origin: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dish:hover .dish__price {
+  animation: price 0.5s ease both;
+}
+.dish__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .dish__text {
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__name {
   font-weight: 700;
@@ -662,6 +701,16 @@ img {
   flex-direction: column;
   justify-content: end;
   margin: 0 10px 0 10px;
+  padding-right: 10px;
+}
+.dish p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish i {
+  font-size: 25px;
+  animation: check 0.5s ease both;
+  color: white;
 }
 
 .button {
@@ -737,23 +786,14 @@ button a {
   }
 }
 .coche {
-  height: 42px;
-  width: 10%;
-}
-.coche__test {
-  background: green;
-  height: 42px;
+  display: none;
+  position: absolute;
+  background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  transition: transform 1000ms;
-}
-
-.dish__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
+  right: 0;
+  padding: 0 13px;
+  height: 100%;
+  width: 50px;
 }
 
 .heart {
