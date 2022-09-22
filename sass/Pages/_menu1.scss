@@ -11,6 +11,7 @@ img{
     margin-top: -50px;
     padding: 30px 20px 30px 20px;
     position: relative;
+    z-index: 5;
     &__header{
         display: flex;
         justify-content: space-between;
@@ -34,6 +35,11 @@ img{
         bottom: -10px;
         left: 0;
 }
+    &__dishes{
+        @media (min-width:599px) {
+            display: flex;
+        }
+    }
 }
 .dish{
     @include dish;
@@ -74,14 +80,15 @@ button{
 
 
 .coche{
-    display: none;
     position: absolute;
     background: $color-tertiary;
     border-radius: 0 15px 15px 0;
-    right: 0;
+    right: -50px;
     padding: 0 13px;
     height: 100%;
     width: 50px;
+    @include center;
+    transition: right 0.5s ease-in-out;
 }
 
 .heart{

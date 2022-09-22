@@ -24,6 +24,12 @@ h1{
 
 .operation{
     @include padding-pages;
+    @media (min-width:599px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
 }
 
 .container{
@@ -34,7 +40,9 @@ h1{
 #restaurant{
     background: $color-background-section;
     @include padding-pages;
-}
+  
+    }
+
 
 .card{
     @include shadow;
@@ -44,6 +52,11 @@ h1{
     height: 300px;
     border-radius: 20px;
     transition: transform 500ms;
+    min-width: 224px;
+    @media (min-width: 599px){
+        min-width: 350px;
+}
+        
     a{
         text-decoration: white;
             color: black;
@@ -83,6 +96,14 @@ h1{
     &:hover{
         transform: scale(1.05);
         @include shadow(black);
+}
+&__menu{
+    @media (min-width: 599px){
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      
+}
 }
 }
 

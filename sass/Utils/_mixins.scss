@@ -22,6 +22,7 @@
     color: white;
     position: relative;
     z-index: 1;
+    max-width: 240px;
     &:hover{
         &::after{
         opacity: 1;
@@ -61,6 +62,9 @@
     font-size: 17px;
     font-weight: 500;
     margin: 20px 0 20px 10px;
+    @media (min-width:599px) {
+       width: 430px;
+    }
     :nth-child(1){
         @include center;
         color: white;
@@ -86,20 +90,23 @@
     border-radius: 15px;
     margin-bottom: 10px;
     height: 60px;
+    padding: 0 10px 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    &:hover{
-            .coche{
-                animation: coche 0.5s ease both;
-                transform-origin: right;
-                @include center;
+    z-index: 100;
+    overflow: hidden;
+    &:hover  .coche{
+                right: 0px;
             }
-            .dish__price{
-                animation: price 0.5s ease both;
+    &:hover  .dish__price{
+                padding: 0 50px 0 0;
             }
-        }
+    &:hover  i{
+                animation: check 0.7s ease-in-out;
+    }
+    
     &__content{
         display: flex;
         flex-direction: row;
@@ -110,17 +117,10 @@
     &__text{
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
         }
     &__name{
             font-weight: 700;
             margin-bottom: 5px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-    &__detail{
-            text-overflow: ellipsis;
-            overflow: hidden;
         }
     &__price{
             font-weight: 700;
@@ -128,7 +128,8 @@
             flex-direction: column;
             justify-content: end;
             margin: 0 10px 0 10px;
-            padding-right: 10px;
+            padding: 0 10px 0 0;
+            transition: padding 0.5s ease-in-out;
         }
     p{
         text-overflow: ellipsis;
@@ -136,14 +137,10 @@
     }
     i{
         font-size: 25px;
-        animation: check 0.5s ease both;
         color: white;
     }    
 }
-@keyframes coche {
-    0% {transform: scaleX(0);}
-    100% {transform: scaleX(1);}
-}
+
 
 @keyframes price {
     0% {padding-right: 10px;}
@@ -151,7 +148,7 @@
 }
 
 @keyframes check {
-    0% {transform: rotate(-180deg);}
+    0% {transform: rotate(-270deg);}
     100% {transform: rotate(0deg);}
     
 }

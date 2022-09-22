@@ -313,14 +313,6 @@ template {
   margin: 0;
 }
 
-@keyframes coche {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 @keyframes price {
   0% {
     padding-right: 10px;
@@ -331,7 +323,7 @@ template {
 }
 @keyframes check {
   0% {
-    transform: rotate(-180deg);
+    transform: rotate(-270deg);
   }
   100% {
     transform: rotate(0deg);
@@ -430,6 +422,7 @@ footer p {
   color: white;
   position: relative;
   z-index: 1;
+  max-width: 240px;
   margin-top: 20px;
 }
 .hero button:hover::after {
@@ -465,6 +458,13 @@ h1 {
 .operation {
   padding: 40px 20px 40px 20px;
 }
+@media (min-width: 599px) {
+  .operation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .container {
   display: flex;
@@ -479,6 +479,11 @@ h1 {
   font-size: 17px;
   font-weight: 500;
   margin: 20px 0 20px 10px;
+}
+@media (min-width: 599px) {
+  .container {
+    width: 430px;
+  }
 }
 .container :nth-child(1) {
   display: flex;
@@ -513,6 +518,12 @@ h1 {
   height: 300px;
   border-radius: 20px;
   transition: transform 500ms;
+  min-width: 224px;
+}
+@media (min-width: 599px) {
+  .card {
+    min-width: 350px;
+  }
 }
 .card a {
   text-decoration: white;
@@ -553,6 +564,13 @@ h1 {
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 10px 0 black;
+}
+@media (min-width: 599px) {
+  .card__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 .loader {
@@ -628,6 +646,7 @@ img {
   margin-top: -50px;
   padding: 30px 20px 30px 20px;
   position: relative;
+  z-index: 5;
 }
 .menu__header {
   display: flex;
@@ -652,6 +671,11 @@ img {
   bottom: -10px;
   left: 0;
 }
+@media (min-width: 599px) {
+  .menu__dishes {
+    display: flex;
+  }
+}
 
 .dish {
   box-shadow: 0 5px 10px 0 #c6c6c6;
@@ -659,20 +683,22 @@ img {
   border-radius: 15px;
   margin-bottom: 10px;
   height: 60px;
+  padding: 0 10px 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  z-index: 100;
+  overflow: hidden;
 }
 .dish:hover .coche {
-  animation: coche 0.5s ease both;
-  transform-origin: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: 0px;
 }
 .dish:hover .dish__price {
-  animation: price 0.5s ease both;
+  padding: 0 50px 0 0;
+}
+.dish:hover i {
+  animation: check 0.7s ease-in-out;
 }
 .dish__content {
   display: flex;
@@ -683,17 +709,10 @@ img {
 .dish__text {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .dish__name {
   font-weight: 700;
   margin-bottom: 5px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.dish__detail {
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .dish__price {
   font-weight: 700;
@@ -701,7 +720,8 @@ img {
   flex-direction: column;
   justify-content: end;
   margin: 0 10px 0 10px;
-  padding-right: 10px;
+  padding: 0 10px 0 0;
+  transition: padding 0.5s ease-in-out;
 }
 .dish p {
   text-overflow: ellipsis;
@@ -709,7 +729,6 @@ img {
 }
 .dish i {
   font-size: 25px;
-  animation: check 0.5s ease both;
   color: white;
 }
 
@@ -730,6 +749,7 @@ button {
   color: white;
   position: relative;
   z-index: 1;
+  max-width: 240px;
   width: 50%;
 }
 button:hover::after {
@@ -786,14 +806,17 @@ button a {
   }
 }
 .coche {
-  display: none;
   position: absolute;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  right: 0;
+  right: -50px;
   padding: 0 13px;
   height: 100%;
   width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s ease-in-out;
 }
 
 .heart {
