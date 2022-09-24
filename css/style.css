@@ -323,10 +323,10 @@ template {
 }
 @keyframes check {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(90deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 header {
@@ -615,24 +615,6 @@ h1 {
     transform: rotate(2turn);
   }
 }
-.heart {
-  height: 35px;
-  width: 35px;
-}
-.heart__full {
-  fill: url(#heart-gradient);
-  position: absolute;
-  right: 20px;
-  opacity: 0;
-}
-.heart__full:hover {
-  opacity: 1;
-  transition: 0.5s;
-}
-.heart__empty {
-  position: relative;
-}
-
 img {
   height: 300px;
   object-fit: cover;
@@ -698,7 +680,8 @@ img {
   padding: 0 50px 0 0;
 }
 .dish:hover i {
-  animation: check 0.7s ease-in-out;
+  transform: rotate(90deg);
+  animation: check 0.3s ease-in-out 0.2s both;
 }
 .dish__content {
   display: flex;
@@ -780,19 +763,16 @@ button a {
 .dishes1 {
   margin-bottom: 40px;
   position: relative;
-  animation: pop 2s;
 }
 
 .dishes2 {
   margin-bottom: 40px;
   position: relative;
-  animation: pop 2s 300ms both;
 }
 
 .dishes3 {
   margin-bottom: 40px;
   position: relative;
-  animation: pop 2s 600ms both;
 }
 
 @keyframes pop {
@@ -819,22 +799,81 @@ button a {
   transition: right 0.5s ease-in-out;
 }
 
-.heart {
-  height: 35px;
-  width: 35px;
+.case-1 {
+  animation: pop 2s 200ms both;
 }
-.heart__full {
-  fill: url(#heart-gradient);
-  position: absolute;
-  right: 20px;
-  opacity: 0;
+
+.case-2 {
+  animation: pop 2s 400ms both;
 }
-.heart__full:hover {
-  opacity: 1;
-  transition: 0.5s;
+
+.case-3 {
+  animation: pop 2s 600ms both;
 }
-.heart__empty {
+
+.case-4 {
+  animation: pop 2s 800ms both;
+}
+
+.case-5 {
+  animation: pop 2s 1000ms both;
+}
+
+.case-6 {
+  animation: pop 2s 1200ms both;
+}
+
+.case-7 {
+  animation: pop 2s 1400ms both;
+}
+
+.case-8 {
+  animation: pop 2s 1600ms both;
+}
+
+.case-9 {
+  animation: pop 2s 1800ms both;
+}
+
+.case-10 {
+  animation: pop 2s 2000ms both;
+}
+
+.heart-container {
   position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.heart-clip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#svgPath);
+}
+.heart-clip:hover::before {
+  top: 0;
+}
+.heart-clip::before {
+  position: absolute;
+  top: 50px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: top 0.5s linear;
+}
+
+.heart-stroke {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: black;
 }
 
 /*# sourceMappingURL=style.css.map */
