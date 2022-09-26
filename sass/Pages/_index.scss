@@ -40,6 +40,12 @@ h1{
 #restaurant{
     background: $color-background-section;
     @include padding-pages;
+    width: 100%;
+    @media (min-width: 800px){
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
   
     }
 
@@ -53,7 +59,7 @@ h1{
     border-radius: 20px;
     transition: transform 500ms;
     min-width: 224px;
-    @media (min-width: 599px){
+    @media (min-width: 800px){
         min-width: 350px;
 }
         
@@ -98,12 +104,13 @@ h1{
         @include shadow(black);
 }
 &__menu{
-    @media (min-width: 599px){
+    @media (min-width: 800px){
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-      
-}
+        max-width: 1050px;
+        align-items: center;
+        }
 }
 }
 

@@ -40,7 +40,12 @@ img{
             display: flex;
         }
     }
+    &__content{
+        @media (min-width: 1200px){
+            display: flex
 
+    }
+    }
 }
 .dish{
     @include dish;
@@ -141,3 +146,11 @@ button{
     left: 0;
     fill: black;
  }
+
+ .dishes{
+    margin-bottom: 40px;
+    @media (min-width: 1200px) {
+        margin: 0 20px 0 20px;
+        width: 33%;
+ }
+}
