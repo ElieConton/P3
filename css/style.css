@@ -313,22 +313,43 @@ template {
   margin: 0;
 }
 
-@keyframes price {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 50px;
-  }
+.heart-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
 }
-@keyframes check {
-  0% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+
+.heart-clip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#svgPath);
 }
+.heart-clip:hover::before {
+  top: 0;
+}
+.heart-clip::before {
+  position: absolute;
+  top: 50px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: top 0.5s linear;
+}
+
+.heart-stroke {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: black;
+}
+
 header {
   height: 75px;
   display: flex;
@@ -412,7 +433,7 @@ footer p {
   font-weight: 300;
   color: grey;
 }
-.hero button {
+.hero a {
   box-shadow: 0 5px 10px 0 #c6c6c6;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: 0;
@@ -423,12 +444,16 @@ footer p {
   position: relative;
   z-index: 1;
   max-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   margin-top: 20px;
 }
-.hero button:hover::after {
+.hero a:hover::after {
   opacity: 1;
 }
-.hero button::after {
+.hero a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -443,7 +468,7 @@ footer p {
   cursor: pointer;
   border-radius: 25px;
 }
-.hero button a {
+.hero a a {
   color: white;
   font-size: 17px;
   font-weight: 500;
@@ -458,15 +483,14 @@ h1 {
 .operation {
   padding: 40px 20px 40px 20px;
 }
-@media (min-width: 599px) {
+@media (min-width: 800px) {
   .operation {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-
-.container {
+.operation__case {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -480,12 +504,12 @@ h1 {
   font-weight: 500;
   margin: 20px 0 20px 10px;
 }
-@media (min-width: 599px) {
-  .container {
+@media (min-width: 800px) {
+  .operation__case {
     width: 430px;
   }
 }
-.container :nth-child(1) {
+.operation__case :nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,7 +523,7 @@ h1 {
   font-size: 14px;
   font-weight: 400;
 }
-.container :nth-child(2) {
+.operation__case :nth-child(2) {
   color: #7e7e7e;
   margin: 0 40px 0 40px;
   font-size: 20px;
@@ -515,6 +539,15 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+}
+@media (min-width: 800px) {
+  #restaurant__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1050px;
+    align-items: center;
   }
 }
 
@@ -559,6 +592,7 @@ h1 {
 }
 .card__footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
@@ -572,15 +606,6 @@ h1 {
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 10px 0 black;
-}
-@media (min-width: 800px) {
-  .card__menu {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1050px;
-    align-items: center;
-  }
 }
 
 .loader {
@@ -623,6 +648,83 @@ h1 {
   }
   to {
     transform: rotate(2turn);
+  }
+}
+.dish {
+  box-shadow: 0 5px 10px 0 #c6c6c6;
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: 60px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+}
+.dish:hover .validation {
+  right: 0px;
+}
+.dish:hover .dish__price {
+  padding: 0 50px 0 0;
+}
+.dish:hover i {
+  transform: rotate(90deg);
+  animation: check 0.3s ease-in-out 0.2s both;
+}
+.dish__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.dish__text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dish__name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.dish__price {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 0 10px 0 10px;
+  padding: 0 10px 0 0;
+  transition: padding 0.5s ease-in-out;
+}
+.dish p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish i {
+  font-size: 25px;
+  color: white;
+}
+@media (min-width: 799px) {
+  .dish {
+    width: 100%;
+  }
+}
+
+@keyframes price {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 50px;
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 img {
@@ -674,74 +776,6 @@ img {
   }
 }
 
-.dish {
-  box-shadow: 0 5px 10px 0 #c6c6c6;
-  background: white;
-  border-radius: 15px;
-  margin-bottom: 10px;
-  height: 60px;
-  padding: 0 10px 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 100;
-  overflow: hidden;
-}
-.dish:hover .coche {
-  right: 0px;
-}
-.dish:hover .dish__price {
-  padding: 0 50px 0 0;
-}
-.dish:hover i {
-  transform: rotate(90deg);
-  animation: check 0.3s ease-in-out 0.2s both;
-}
-.dish__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.dish__text {
-  white-space: nowrap;
-  overflow: hidden;
-}
-.dish__name {
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-.dish__price {
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  margin: 0 10px 0 10px;
-  padding: 0 10px 0 0;
-  transition: padding 0.5s ease-in-out;
-}
-.dish p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.dish i {
-  font-size: 25px;
-  color: white;
-}
-@media (min-width: 799px) {
-  .dish {
-    width: 100%;
-  }
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0 50px 0;
-}
-
 button {
   box-shadow: 0 5px 10px 0 #c6c6c6;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -753,7 +787,7 @@ button {
   position: relative;
   z-index: 1;
   max-width: 240px;
-  width: 50%;
+  margin: 50px 0 50px 0;
 }
 button:hover::after {
   opacity: 1;
@@ -780,19 +814,10 @@ button a {
   text-decoration: none;
 }
 
-.dishes1 {
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.dishes2 {
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.dishes3 {
-  margin-bottom: 40px;
-  position: relative;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes pop {
@@ -805,7 +830,7 @@ button a {
     opacity: 1;
   }
 }
-.coche {
+.validation {
   position: absolute;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
@@ -859,50 +884,14 @@ button a {
   animation: pop 2s 2000ms both;
 }
 
-.heart-container {
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
-
-.heart-clip {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  clip-path: url(#svgPath);
-}
-.heart-clip:hover::before {
-  top: 0;
-}
-.heart-clip::before {
-  position: absolute;
-  top: 50px;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  transition: top 0.5s linear;
-}
-
-.heart-stroke {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: black;
-}
-
 .dishes {
   margin-bottom: 40px;
 }
 @media (min-width: 1200px) {
   .dishes {
     margin: 0 20px 0 20px;
-    width: 33%;
+    min-width: 30%;
+    max-width: 30%;
   }
 }
 

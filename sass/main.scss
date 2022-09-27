@@ -1,7 +1,9 @@
+@import "./Utils/mixins";
+@import "./Utils/variables";
 @import "./Base/normalize";
 @import "./Base/typography";
-@import "./Utils/variables";
-@import "./Utils/mixins";
+@import "./Components/button";
+@import "./Components/heart";
 @import "./Layout/header";
 @import "./Layout/form";
 @import "./Layout/footer";

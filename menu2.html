@@ -14,66 +14,65 @@
         <a href="index.html">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
-      <p>ohmyfood</p>
+        <p>ohmyfood</p>
    </header>
    <main>
         <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
         <div class="menu">
             <div class="menu__header">
                 <h2>La note enchantée</h2>
-                <svg class="heart heart__empty" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 100 100" xml:space="preserve">
+                <svg id='heart' height="0" width="0">
                     <defs>
-                    <linearGradient id="heart-gradient">
-                        <stop offset="0%" stop-color="#9356DC"/>
-                        <stop offset="100%" stop-color="#FF79DA"/>
-                    </linearGradient>
+                        <clipPath id="svgPath">
+                            <path d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z"></path>
+                        </clipPath>
                     </defs>
-                    <g>
-                        <path d="M 45 83.769 L 6.653 45.422 C 2.363 41.132 0 35.428 0 29.36 s 2.363 -11.771 6.653 -16.062 c 4.29 -4.291 9.994 -6.653 16.062 -6.653 c 6.068 0 11.772 2.363 16.062 6.653 L 45 19.521 l 6.223 -6.223 c 4.29 -4.291 9.995 -6.653 16.063 -6.653 s 11.771 2.363 16.062 6.653 S 90 23.293 90 29.36 s -2.363 11.771 -6.653 16.062 L 45 83.769 z M 22.715 8.645 c -5.533 0 -10.735 2.155 -14.647 6.067 S 2 23.827 2 29.36 s 2.155 10.735 6.067 14.647 L 45 80.94 l 36.933 -36.933 C 85.845 40.095 88 34.894 88 29.36 s -2.155 -10.735 -6.067 -14.648 C 78.02 10.8 72.817 8.645 67.285 8.645 c -5.533 0 -10.735 2.155 -14.648 6.067 L 45 22.35 l -7.637 -7.637 C 33.45 10.8 28.249 8.645 22.715 8.645 z"/>
-                    </g>
                 </svg>
-                <svg class="heart heart__full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 100 100" xml:space="preserve">
-                    <defs>
-                    </defs>
-                    <path d="M 83.627 13.423 L 83.627 13.423 c -8.498 -8.498 -22.403 -8.498 -30.901 0 L 45 21.148 l -7.725 -7.725 c -8.498 -8.498 -22.403 -8.498 -30.901 0 s -8.498 22.403 0 30.901 l 13.247 13.247 c 0 0 0 0 0 0 L 45 82.951 l 25.379 -25.379 l 13.248 -13.248 C 92.124 35.826 92.124 21.921 83.627 13.423 z"/> 
-                </svg>
+                
+                <div class="heart-container">
+                   <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke'>
+                      <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"></path>
+                   </svg>
+                   
+                   <a href='#' class='heart-clip'></a>
+                </div>
             </div>
-            <div class="menu__dishes">
-            <div class="dishes1">
-                <h3>ENTRÉES</h3>
-                <div class="dish">
-                    <div class="dish__content">
-                        <div class="dish__text">
-                            <div class="dish__name">   
-                                <p>Ravioles de foie gras</p>
+            <div class="menu__content">
+                <div class="dishes">
+                    <h3>ENTRÉES</h3>
+                    <div class="dish case-1">
+                        <div class="dish__content">
+                            <div class="dish__text">
+                                <div class="dish__name">
+                                    <p>Ravioles de foie gras</p>
+                                </div>
+                                <div class="dish__detail">
+                                    <p>Accompagnés de leur crème à la truffe</p>
+                                </div>
                             </div>
-                            <div class="dish__detail">
-                                <p>Accompagnés de leur crème à la truffe</p>
-                            </div>
-                        </div>    
-                        <div class="dish__price">25€</div> 
+                            <div class="dish__price">25€</div>
+                        </div>
+                        <div class="validation">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>  
+                    <div class="dish case-2">
+                        <div class="dish__content">
+                            <div class="dish__text">
+                                <div class="dish__name">
+                                    <p>Caviar osciètre </p>
+                                </div>
+                                <div class="dish__detail">
+                                    <p>Sur blini à la farine de blé noir</p>
+                                </div>
+                            </div>    
+                        <div class="dish__price">35€</div>
                     </div>
-                    <div class="coche">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </div>   
-                <div class="dish">
-                    <div class="dish__content">
-                        <div class="dish__text">
-                            <div class="dish__name">
-                                <p>Caviar osciètre</p>
-                            </div>
-                            <div class="dish__detail">
-                                <p>Sur blini à la farine de blé noir</p>
-                            </div>
-                        </div>    
-                        <p class="dish__price">35€</p>
-                    </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
-                <div class="dish">
+                <div class="dish case-3">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -82,14 +81,14 @@
                             <div class="dish__detail">
                                 <p>Mariné aux zestes d'orange</p>
                             </div>
-                        </div>   
-                        <div class="dish__price">20€</div>
+                        </div>    
+                        <div class="dish__price">20€</div> 
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
-                <div class="dish">
+                <div class="dish case-4">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -99,16 +98,16 @@
                                 <p>Confiture de figue et pain toasté</p>
                             </div>
                         </div>    
-                        <div class="dish__price">35€</div>
+                        <div class="dish__price">35€</div> 
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
             </div>
-            <div class="dishes2">   
+            <div class="dishes">
                 <h3>PLATS</h3>
-                <div class="dish">
+                <div class="dish case-5">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -118,13 +117,13 @@
                                 <p>Sur lit de purée de céleri-rave</p>
                             </div>
                         </div>    
-                        <div class="dish__price">40€</div>
+                        <div class="dish__price">40€</div>   
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
-                </div>
-                <div class="dish">
+                </div>    
+                <div class="dish case-6">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -136,11 +135,11 @@
                         </div>    
                         <div class="dish__price">35€</div>
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
-                </div>
-                <div class="dish">
+                </div>    
+                <div class="dish case-7">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -149,17 +148,17 @@
                             <div class="dish__detail">
                                 <p>Et riz sauvage aux zestes de citron</p>
                             </div>
-                        </div>    
+                        </div>
                         <div class="dish__price">44€</div>
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
-            </div> 
-            <div class="dishes3"> 
+            </div>
+            <div class="dishes">
                 <h3>DESSERTS</h3>
-                <div class="dish">
+                <div class="dish case-8">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -168,14 +167,14 @@
                             <div class="dish__detail">
                                 <p>Glace au caramel brun et sel de Guérande</p>
                             </div>
-                        </div>    
+                        </div>
                         <div class="dish__price">18€</div>
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
-                    </div> 
+                    </div>
                 </div>
-                <div class="dish">
+                <div class="dish case-9">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -184,14 +183,14 @@
                             <div class="dish__detail">
                                 <p>Avec son coulis de citron</p>
                             </div>
-                        </div>    
+                        </div>
                         <div class="dish__price">22€</div>
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
-                <div class="dish">
+                <div class="dish case-10">
                     <div class="dish__content">
                         <div class="dish__text">
                             <div class="dish__name">
@@ -200,18 +199,19 @@
                             <div class="dish__detail">
                                 <p>Déstructurée</p>
                             </div>
-                        </div>    
+                        </div>
                         <div class="dish__price">23€</div>
                     </div>
-                    <div class="coche">
+                    <div class="validation">
                         <i class="fa-solid fa-circle-check"></i>
-                    </div>    
+                    </div>
                 </div>
             </div>
-            </div>
+        </div>
             <div class="button">
                 <button>Commander</button>
             </div>
+        
         </div>
    </main>
    <footer>
@@ -219,7 +219,7 @@
       <a href="#"><i class="fa-solid fa-utensils"></i>Proposez un restaurant</a>
       <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
       <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="mailto:contact@ohmyfood.com">Contact</a>
    </footer>
 </body>
 </html>

@@ -47,33 +47,16 @@ img{
     }
     }
 }
-.dish{
-    @include dish;
 
-}
-.button{
-    @include center;
+
+button{
+    
+    @include btn;
     margin: 50px 0 50px 0;
 }
-button{
-    @include btn;
-    width: 50%;
-}
-.dishes1{
-    margin-bottom: 40px;
-    position: relative;
-}
 
-.dishes2{
-    margin-bottom: 40px;
-    position: relative;
-    
-}
-
-.dishes3{
-    margin-bottom: 40px;
-    position: relative;
-
+.button{
+    @include center;
 }
 
 @keyframes pop {
@@ -83,7 +66,7 @@ button{
 
 
 
-.coche{
+.validation{
     position: absolute;
     background: $color-tertiary;
     border-radius: 0 15px 15px 0;
@@ -95,62 +78,17 @@ button{
     transition: right 0.5s ease-in-out;
 }
 
-
-
-
-
  @for $i from 1 through 10 {
     .case-#{$i} {
         animation: pop 2s 100ms*($i*2) both;
     }
 }
 
-.heart-container {
-    position: relative;
-    width: 40px;
-    height: 40px;
- }
- 
- .heart-clip {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    clip-path: url(#svgPath);
- 
-    &:hover {
- 
-       &::before {
-          top: 0;
-       }
-    }
-    &::before {
-       position: absolute;
-       top: 50px;
-       content: "";
-       display: block;
-       width: 100%;
-       height: 100%;
-       background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-       transition: top 0.5s linear;
-    }
- }
- 
- 
- .heart-stroke {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: black;
- }
-
- .dishes{
+.dishes{
     margin-bottom: 40px;
     @media (min-width: 1200px) {
         margin: 0 20px 0 20px;
-        width: 33%;
- }
+        min-width: 30%;
+        max-width: 30%;
+    }
 }
