@@ -1,3 +1,36 @@
+.loader{
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $color-primary;
+    animation: loader 2s both;
+    @include center;
+    &__spinner{
+        position: fixed;
+        z-index: 3;
+        height: 75px;
+        width: 75px;
+        border: 15px solid white;
+        border-top-color: $color-tertiary;
+        border-radius: 50%;
+        animation: loading 1.75s ease; 
+        }
+    }
+@keyframes loader {
+    0%,75% {opacity: 0.5;};
+    100% {opacity: 0; visibility: hidden};
+}
+
+@keyframes loading{
+    from  {transform: rotate(0turn);
+    }
+    to {transform: rotate(2turn);
+    }   
+}
 
 .hero{
     @include center;
@@ -31,6 +64,16 @@ h1{
         flex-direction: column;
         align-items: center;
     }
+    &__content{
+        @media (min-width: 800px){
+            width: 50%;
+        }
+        @media (min-width: 1200px){
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
     &__case{
         @include center;
         @include shadow;
@@ -42,8 +85,9 @@ h1{
         font-size: 17px;
         font-weight: 500;
         margin: 20px 0 20px 10px;
-        @media (min-width:800px) {
-            width: 430px;
+        @media (min-width: 1200px) {
+            min-width: 30%;
+            margin: 20px 10px 20px 10px;
         }
         :nth-child(1){
             @include center;
@@ -80,7 +124,7 @@ h1{
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            max-width: 1050px;
+            width: 100%;
             align-items: center;
             }
     }
@@ -91,7 +135,7 @@ h1{
 .card{
     @include shadow;
     position: relative;
-    margin: 40px 0 40px 0;
+    margin: 40px 10px 40px 10px;
     background: white;
     height: 300px;
     border-radius: 20px;
@@ -145,110 +189,7 @@ h1{
 
 }
 
-.loader{
-    height: 100%;
-    width: 100%;
-    opacity: 0.5;
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: $color-primary;
-    animation: loader 2s both;
-    @include center;
-    &__spinner{
-        position: fixed;
-        z-index: 3;
-        height: 75px;
-        width: 75px;
-        border: 15px solid white;
-        border-top-color: $color-tertiary;
-        border-radius: 50%;
-        animation: loading 1.75s ease; 
-        }
-    }
-@keyframes loader {
-    0%,75% {opacity: 0.5;};
-    100% {opacity: 0; visibility: hidden};
-}
-
-@keyframes loading{
-    from  {transform: rotate(0turn);
-    }
-    to {transform: rotate(2turn);
-    }   
-}
-
-.dish {
-    @include shadow;
-    background: white;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    height: 60px;
-    padding: 0 10px 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 100;
-    overflow: hidden;
-    &:hover  .validation{
-                right: 0px;
-            }
-    &:hover  .dish__price{
-                padding: 0 50px 0 0;
-            }
-    &:hover  i{
-        transform: rotate(90deg);
-                animation: check 0.3s ease-in-out 0.2s both;
-    }
-    
-    &__content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        
-    }     
-    &__text{
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    &__name{
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-    &__price{
-            font-weight: 700;
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            margin: 0 10px 0 10px;
-            padding: 0 10px 0 0;
-            transition: padding 0.5s ease-in-out;
-        }
-    p{
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-    i{
-        font-size: 25px;
-        color: white;
-    }    
-    @media (min-width: 799px){
-        width: 100%;
-    }
-}
 
 
-@keyframes price {
-    0% {padding-right: 10px;}
-    100% {padding-right: 50px;}
-}
 
-@keyframes check {
-    0% {transform: rotate(90deg);}
-    100% {transform: rotate(360deg);}
-    
-}
 
